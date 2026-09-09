@@ -198,7 +198,8 @@ header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdro
 <div class="field"><label>Foto de referência do bolo</label><input id="cakePhoto" type="file" accept="image/*"></div>
 <div class="field"><label>Observações sobre o topper</label><textarea id="topper" placeholder="Escreva o que deseja no topper, nome, idade, frase, cores, etc."></textarea></div>
 <div class="field"><label>Outras observações</label><textarea id="obs" placeholder="Tema, cores, decoração ou algum detalhe especial..."></textarea></div>
-<div class="summary"><strong>Resumo da encomenda</strong><div class="summary-line"><span>Tamanho</span><span id="sumWeight">—</span></div><div class="summary-line"><span>Massa</span><span id="sumMass">—</span></div><div class="summary-line"><span>Outros itens</span><span id="sumOther">—</span></div><div class="summary-line"><span>Recheios</span><span id="sumFill">—</span></div><div class="summary-line"><span>Cobertura</span><span id="sumCover">—</span></div><div class="summary-line"><span>Adicionais</span><span id="sumExtras">—</span></div><div class="total"><span>Estimativa</span><span id="total">R$ 0,00</span></div><div class="note"><b>Importante:</b> o valor exibido é somente uma estimativa. Após recebermos seu pedido, enviaremos uma devolutiva com o valor final, considerando recheio, decoração, topper e demais detalhes.</div><button class="btn" onclick="sendWhatsApp()">Enviar pedido pelo WhatsApp →</button></div>
+<div class="summary"><strong>Resumo da encomenda</strong><div class="summary-line"><span>Tamanho</span><span id="sumWeight">—</span></div><div class="summary-line"><span>Massa</span><span id="sumMass">—</span></div><div class="summary-line"><span>Outros itens</span><span id="sumOther">—</span></div><div class="summary-line"><span>Recheios</span><span id="sumFill">—</span></div><div class="summary-line"><span>Cobertura</span><span id="sumCover">—</span></div><div class="summary-line"><span>Adicionais</span><span id="sumExtras">—</span></div><div class="total"><span>Estimativa</span><span id="total">R$ 0,00</span></div><div class="note"><b>Importante:</b> o valor exibido é somente uma estimativa. Após recebermos seu pedido, enviaremos uma devolutiva com o valor final, considerando recheio, decoração, topper e demais detalhes.</div><button class="btn" onclick="sendWhatsApp(WHATSAPP_KAROL)">💜 Pedir pelo WhatsApp — Karol</button>
+<button class="btn" onclick="sendWhatsApp(WHATSAPP_KARLA)">💜 Pedir pelo WhatsApp — Karla</button></div>
 </div></section>
 
 <section class="section" id="encomenda"><div class="card" style="text-align:center;padding:30px"><h2>Faça sua encomenda ♡</h2><p class="sub">Escolha seus sabores, envie sua referência e conte pra gente como você imaginou seu bolo. Vamos analisar todos os detalhes e retornar com o valor final.</p><a class="smallbtn" href="#bolo">Montar minha encomenda</a></div></section>
@@ -212,7 +213,7 @@ const WHATSAPP_KAROL = '5537998363379';
 const WHATSAPP_KARLA = '5537998706959';
 // ======================================================
 let weight=null, mass=null, fillings=[], cover=null, fruit=false;
-const money=v=>v.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+const money=v=>v.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});u
 const weightCards=document.querySelectorAll('#weights .choice');
 weightCards.forEach(c=>c.addEventListener('click',()=>{weightCards.forEach(x=>x.classList.remove('selected'));c.classList.add('selected');if(c.dataset.type==='bento'){weight={type:'Bento Cake',kg:null};document.getElementById('kg').value=''}else{updateKg()};update()}));
 function updateKg(){const kg=parseFloat(document.getElementById('kg').value.replace(',','.'));weight=kg>=0.5?{type:'Bolo por peso',kg}:null}
