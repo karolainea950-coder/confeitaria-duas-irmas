@@ -229,6 +229,9 @@ document.getElementById('fruit').addEventListener('click',e=>{if(e.target.closes
 function estimate(){if(!weight)return 0;if(weight.type==='Bento Cake')return 20.01;const prices=[...fillCards].filter(c=>c.classList.contains('selected')).map(c=>+c.dataset.price);const base=(prices.length?Math.max(...prices):55)*weight.kg;const extra=cover?(+document.querySelector('#covers .selected')?.dataset.extra||0):0;return base+extra}
 function update(){document.getElementById('sumMass')&&(document.getElementById('sumMass').textContent=mass||'—');document.getElementById('sumOther')&&(document.getElementById('sumOther').textContent=otherSummary());document.getElementById('sumWeight').textContent=weight?(weight.type==='Bento Cake'?'Bento Cake':' '+weight.kg.toLocaleString('pt-BR')+' kg'):'—';document.getElementById('sumFill').textContent=fillings.length?fillings.join(', '):'—';document.getElementById('sumCover').textContent=cover||'—';const extras=[];if(cover&&+document.querySelector('#covers .selected')?.dataset.extra)extras.push(`${cover}: + R$ 5,00`);if(fruit)extras.push('Frutas na decoração: valor a combinar');extras.push('Topper: R$ 15,00 a R$ 30,00 conforme modelo');document.getElementById('sumExtras').textContent=extras.join(' • ')||'—';document.getElementById('total').textContent=money(estimate())}
 function sendWhatsApp(numero){
+  if(!numero){
+    numero = WHATSAPP_KAROL;
+  }
   if(!weight){
     alert('Escolha o tamanho do bolo.');
     return;
