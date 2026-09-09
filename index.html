@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Confeitaria Duas Irmãs</title>
+<style>
+:root{--bg:#f7f1fb;--card:#fff;--ink:#34283a;--muted:#77677f;--lilac:#9a72b7;--lilac2:#c9aee0;--deep:#68427f;--line:#eadcf2;--soft:#f0e5f6}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#fbf8fd 0,#f5edf9 100%);color:var(--ink)}
+a{text-decoration:none;color:inherit}.wrap{max-width:1080px;margin:auto;padding:0 18px 60px}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{max-width:1080px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:12px 18px;gap:12px}.brand{display:flex;align-items:center;gap:10px}.mark{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--deep),var(--lilac2));color:#fff;display:grid;place-items:center;font-weight:800}.brand b{font-size:16px}.brand small{display:block;color:var(--muted);margin-top:2px}.links{display:flex;gap:8px;overflow:auto}.links a{padding:9px 11px;border-radius:999px;font-size:13px;white-space:nowrap}.links a:hover{background:var(--soft)}
+.hero{margin-top:28px;background:linear-gradient(135deg,#6f4786,#9d72b8 58%,#d5bce5);border-radius:28px;padding:42px 28px;color:#fff;box-shadow:0 18px 50px rgba(104,66,127,.18)}.eyebrow{font-size:11px;letter-spacing:2px;font-weight:800;opacity:.88}.hero h1{font-family:Georgia,serif;font-size:48px;line-height:1.02;margin:12px 0}.hero p{max-width:700px;line-height:1.6;margin:0 0 22px;color:#fbf7fd}.cta{display:inline-block;background:#fff;color:var(--deep);font-weight:800;padding:13px 18px;border-radius:14px}
+.section{padding:38px 0}.section h2{font-family:Georgia,serif;font-size:32px;margin:0 0 6px}.sub{color:var(--muted);margin:0 0 22px;line-height:1.5}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.grid3{grid-template-columns:repeat(3,minmax(0,1fr))}.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:0 7px 25px rgba(80,50,90,.05)}.card h3{margin:0 0 7px;font-size:18px}.price{color:var(--deep);font-weight:800}.muted{color:var(--muted);font-size:13px}.pill{display:inline-block;background:var(--soft);color:var(--deep);padding:6px 9px;border-radius:999px;font-size:12px;font-weight:700;margin:3px 3px 0 0}
+.menu-title{display:flex;align-items:end;justify-content:space-between;gap:10px;margin-top:28px}.menu-title h3{font-family:Georgia,serif;font-size:25px;margin:0}.menu-note{background:#f2e8f7;border:1px solid var(--line);padding:13px 15px;border-radius:16px;color:#654f6d;font-size:13px;line-height:1.5;margin:15px 0}.items{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.item{background:#fff;border:1px solid var(--line);border-radius:15px;padding:13px 14px;display:flex;justify-content:space-between;gap:12px;align-items:center}.item .name{font-weight:700}.item .p{white-space:nowrap;color:var(--deep);font-weight:800;font-size:14px}
+.formbox{background:#fff;border:1px solid var(--line);border-radius:24px;padding:22px;box-shadow:0 12px 35px rgba(80,50,90,.07)}.steps{display:flex;gap:7px;align-items:center;margin:0 0 18px}.step{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--soft);color:var(--deep);font-weight:800}.step.active{background:var(--deep);color:#fff}.line{height:2px;background:var(--line);flex:1}.choice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.choice{cursor:pointer;border:1.5px solid var(--line);background:#fff;border-radius:16px;padding:14px;transition:.15s}.choice:hover,.choice.selected{border-color:var(--lilac);background:#fbf6fd;box-shadow:0 5px 16px rgba(154,114,183,.12)}.check{float:right;width:22px;height:22px;border-radius:50%;border:1px solid var(--lilac2);display:grid;place-items:center;color:transparent}.selected .check{background:var(--lilac);color:#fff;border-color:var(--lilac)}.choice b{display:block;margin-bottom:5px}.field{margin-top:13px}.field label{display:block;font-size:13px;font-weight:800;margin-bottom:6px}.field input,.field select,.field textarea{width:100%;border:1px solid var(--line);border-radius:13px;padding:12px 13px;font:inherit;background:#fff;color:var(--ink)}textarea{min-height:100px;resize:vertical}.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.summary{margin-top:20px;background:#6f4786;color:#fff;border-radius:20px;padding:18px}.summary-line{display:flex;justify-content:space-between;gap:15px;border-bottom:1px solid rgba(255,255,255,.18);padding:8px 0;font-size:14px}.total{display:flex;justify-content:space-between;font-size:22px;font-weight:900;padding-top:14px}.note{font-size:12px;line-height:1.5;opacity:.9;margin-top:10px}.btn{border:0;cursor:pointer;background:#fff;color:var(--deep);font-weight:900;padding:13px 16px;border-radius:13px;margin-top:14px;width:100%;font-size:15px}.smallbtn{display:inline-block;border:0;cursor:pointer;background:var(--deep);color:#fff;font-weight:800;padding:12px 15px;border-radius:13px;margin-top:10px}.footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:13px;text-align:center}
+.badge{font-size:11px;background:#eadcf2;color:var(--deep);padding:5px 8px;border-radius:999px;font-weight:800}.topper{background:#fff;border:1px dashed var(--lilac2);border-radius:16px;padding:15px;margin-top:15px}.order-items{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.order-item{background:#fff;border:1px solid var(--line);border-radius:15px;padding:12px 13px;display:flex;align-items:center;justify-content:space-between;gap:10px}.order-item span{min-width:0}.order-item b{display:block;font-size:14px}.order-item small{display:block;color:var(--muted);font-size:11px;line-height:1.35;margin-top:3px}.order-item input,.order-item select{width:78px;border:1px solid var(--line);border-radius:10px;padding:9px;background:#fff}.hidden{display:none}
+@media(max-width:760px){.nav{align-items:flex-start}.links{max-width:55vw}.hero h1{font-size:38px}.grid,.grid3,.items,.choice-grid,.row{grid-template-columns:1fr}.menu-title{display:block}.wrap{padding:0 14px 45px}.hero{padding:32px 22px}}
+</style>
+</head>
+<body>
+<header><nav class="nav"><a class="brand" href="#inicio"><span class="mark">DI</span><span><b>Confeitaria Duas Irmãs</b><small>Doçura feita com carinho ♡</small></span></a><div class="links"><a href="#cardapio">Cardápio</a><a href="#bolo">Monte seu bolo</a><a href="#encomenda">Encomenda</a></div></nav></header>
+<main class="wrap" id="inicio">
+<section class="hero"><div class="eyebrow">CONFEITARIA DUAS IRMÃS • BOLOS & DOCES</div><h1>Seu momento merece<br>um doce especial ♡</h1><p>Confira nosso cardápio completo, conheça os sabores e monte sua encomenda do jeitinho que você imaginou.</p><a class="cta" href="#cardapio">Ver cardápio completo ↓</a></section>
+
+<section class="section" id="cardapio">
+<h2>Nosso cardápio</h2><p class="sub">Todos os valores abaixo são os valores informados no cardápio da Confeitaria Duas Irmãs. Para bolos personalizados, decoração e adicionais, o valor final é confirmado após a análise do pedido.</p>
+
+<div class="menu-title"><h3>🍰 Bolos tradicionais</h3><span class="badge">valor por kg</span></div>
+<div class="menu-note">Escolha a massa de <b>pão de ló ou chocolate</b>. Os valores podem variar conforme decoração e adicionais.</div>
+<div class="items">
+<div class="item"><span class="name">Brigadeiro</span><span class="p">R$ 55,00/kg</span></div>
+<div class="item"><span class="name">Ninho</span><span class="p">R$ 55,00/kg</span></div>
+<div class="item"><span class="name">Doce de Leite</span><span class="p">R$ 55,00/kg</span></div>
+<div class="item"><span class="name">Beijinho</span><span class="p">R$ 55,00/kg</span></div>
+<div class="item"><span class="name">Ovomaltine</span><span class="p">R$ 55,00/kg</span></div>
+<div class="item"><span class="name">Brigadeiro 50%</span><span class="p">R$ 60,00/kg</span></div>
+<div class="item"><span class="name">Prestígio</span><span class="p">R$ 60,00/kg</span></div>
+<div class="item"><span class="name">Ninho com Nutella</span><span class="p">R$ 60,00/kg</span></div>
+<div class="item"><span class="name">Ferrero Rocher</span><span class="p">R$ 60,00/kg</span></div>
+<div class="item"><span class="name">Ninho com Morango</span><span class="p">R$ 60,00/kg</span></div>
+<div class="item"><span class="name">Maracujá com Brigadeiro</span><span class="p">R$ 60,00/kg</span></div>
+<div class="item"><span class="name">Doce de Leite com Abacaxi</span><span class="p">R$ 60,00/kg</span></div>
+<div class="item"><span class="name">Doce de Leite com Morango</span><span class="p">R$ 60,00/kg</span></div>
+<div class="item"><span class="name">Brigadeiro com Morango</span><span class="p">R$ 60,00/kg</span></div>
+<div class="item"><span class="name">Doce de Leite com Coco</span><span class="p">R$ 60,00/kg</span></div>
+<div class="item"><span class="name">Kit Kat</span><span class="p">R$ 60,00/kg</span></div>
+<div class="item"><span class="name">Dois Amores</span><span class="p">R$ 60,00/kg</span></div>
+<div class="item"><span class="name">Doce de Leite com Ameixa</span><span class="p">R$ 60,00/kg</span></div>
+<div class="item"><span class="name">Kinder Bueno</span><span class="p">R$ 70,00/kg</span></div>
+</div>
+
+<div class="menu-title"><h3>✨ Festival de sabores</h3><span class="badge">valor por kg</span></div>
+<div class="items">
+<div class="item"><span class="name">Ferrero Rocher</span><span class="p">R$ 70,00/kg</span></div>
+<div class="item"><span class="name">Ninho com Morango</span><span class="p">R$ 65,00/kg</span></div>
+<div class="item"><span class="name">Prestígio</span><span class="p">R$ 70,00/kg</span></div>
+<div class="item"><span class="name">Maracujá com Brigadeiro</span><span class="p">R$ 70,00/kg</span></div>
+<div class="item"><span class="name">Ninho com Nutella</span><span class="p">R$ 70,00/kg</span></div>
+<div class="item"><span class="name">Ovomaltine</span><span class="p">R$ 65,00/kg</span></div>
+<div class="item"><span class="name">Dois Amores</span><span class="p">R$ 65,00/kg</span></div>
+<div class="item"><span class="name">Kinder Bueno</span><span class="p">R$ 70,00/kg</span></div>
+<div class="item"><span class="name">Red Velvet</span><span class="p">R$ 70,00/kg</span></div>
+<div class="item"><span class="name">Kit Kat</span><span class="p">R$ 70,00/kg</span></div>
+<div class="item"><span class="name">Olho de Sogra</span><span class="p">R$ 70,00/kg</span></div>
+</div>
+
+<div class="menu-title"><h3>🍬 Doces personalizados</h3><span class="badge">25 • 50 • 100 unidades</span></div>
+<div class="menu-note"><b>Valores na ordem: 100 unidades / 50 unidades / 25 unidades.</b></div>
+<div class="items">
+<div class="item"><span class="name">Brigadeiro Tradicional</span><span class="p">R$ 110 / 60 / 32,50</span></div>
+<div class="item"><span class="name">Brigadeiro de Nesquik</span><span class="p">R$ 110 / 60 / 32,50</span></div>
+<div class="item"><span class="name">Brigadeiro de Beijinho</span><span class="p">R$ 110 / 60 / 32,50</span></div>
+<div class="item"><span class="name">Brigadeiro de Ninho</span><span class="p">R$ 110 / 60 / 32,50</span></div>
+<div class="item"><span class="name">Brigadeiro de Ferrero Rocher</span><span class="p">R$ 135 / 72,50 / 38,75</span></div>
+<div class="item"><span class="name">Brigadeiro Dois Amores</span><span class="p">R$ 130 / 70 / 37,50</span></div>
+<div class="item"><span class="name">Brigadeiro de Ninho c/ Nutella</span><span class="p">R$ 130 / 70 / 37,50</span></div>
+<div class="item"><span class="name">Brigadeiro 50%</span><span class="p">R$ 120 / 65 / 35,00</span></div>
+<div class="item"><span class="name">Prestígio</span><span class="p">R$ 125 / 67,50 / 36,25</span></div>
+</div>
+
+<div class="menu-title"><h3>🍫 Trufas</h3><span class="badge">25 • 50 • 100 unidades</span></div>
+<div class="menu-note"><b>Valores na ordem: 100 unidades / 50 unidades / 25 unidades.</b></div>
+<div class="items">
+<div class="item"><span class="name">Ninho</span><span class="p">R$ 130 / 70 / 37,50</span></div>
+<div class="item"><span class="name">Coco</span><span class="p">R$ 130 / 70 / 37,50</span></div>
+<div class="item"><span class="name">Morango</span><span class="p">R$ 130 / 70 / 37,50</span></div>
+<div class="item"><span class="name">Maracujá</span><span class="p">R$ 130 / 70 / 37,50</span></div>
+<div class="item"><span class="name">Ninho com Nutella</span><span class="p">R$ 150 / 80 / 42,50</span></div>
+<div class="item"><span class="name">Brigadeiro</span><span class="p">R$ 130 / 70 / 37,50</span></div>
+<div class="item"><span class="name">Meio Amargo</span><span class="p">R$ 140 / 75 / 40,00</span></div>
+</div>
+
+<div class="menu-title"><h3>🎂 Bento Cake</h3><span class="badge">valor conforme peso</span></div>
+<div class="menu-note">O <b>Bento Cake</b> tem valor final de acordo com o peso e o recheio escolhido. <b>Com papel arroz: +R$ 3,00</b> • <b>Com papel impresso: +R$ 5,00</b>.</div>
+<div class="card"><div class="muted" style="margin-bottom:9px">Sabores disponíveis</div>
+<span class="pill">Brigadeiro</span><span class="pill">Ninho</span><span class="pill">Brigadeiro 50%</span><span class="pill">Doce de Leite</span><span class="pill">Beijinho</span><span class="pill">Ovomaltine</span><span class="pill">Prestígio</span><span class="pill">Ninho com Nutella</span><span class="pill">Ferrero Rocher</span><span class="pill">Ninho com Morango</span><span class="pill">Maracujá com Brigadeiro</span><span class="pill">Doce de Leite com Abacaxi</span><span class="pill">Doce de Leite com Morango</span><span class="pill">Brigadeiro com Morango</span><span class="pill">Doce de Leite com Coco</span><span class="pill">Kit Kat</span><span class="pill">Dois Amores</span><span class="pill">Kinder Bueno</span><span class="pill">Doce de Leite com Ameixa</span></div>
+</section>
+
+<section class="section" id="bolo"><h2>Monte seu bolo</h2><p class="sub">Escolha o peso, os recheios e os detalhes. O valor mostrado é apenas uma estimativa.</p>
+<div class="formbox"><div class="steps"><span class="step active">1</span><div class="line"></div><span class="step active">2</span><div class="line"></div><span class="step active">3</span><div class="line"></div><span class="step active">4</span></div>
+<div class="menu-title" style="margin-top:0"><h3>1. Tamanho</h3></div><div class="choice-grid" id="weights">
+<div class="choice" data-type="bento"><span class="check">✓</span><b>Bento Cake</b><span class="muted">acima de R$ 20,00 • valor conforme peso e recheio</span></div>
+<div class="choice" data-type="kg"><span class="check">✓</span><b>Bolo por peso</b><span class="muted">Digite a quantidade de kg que deseja.</span><div class="field"><input id="kg" type="number" min="0.5" step="0.1" placeholder="Ex.: 2,5"></div></div>
+</div>
+<div class="menu-title"><h3>2. Massa</h3></div><div class="choice-grid" id="massas">
+<div class="choice" data-name="Pão de Ló"><span class="check">✓</span><b>Pão de Ló</b></div>
+<div class="choice" data-name="Chocolate"><span class="check">✓</span><b>Chocolate</b></div>
+</div>
+<div class="menu-title"><h3>3. Recheios</h3></div><p class="muted">Até 3 recheios para bolos de até 2 kg. Para bolos acima de 2 kg, escolha até 2 recheios.</p>
+<div class="choice-grid" id="fillings">
+<div class="choice" data-name="Brigadeiro" data-price="55"><span class="check">✓</span><b>Brigadeiro</b><span class="muted">R$ 55,00/kg</span></div>
+<div class="choice" data-name="Ninho" data-price="55"><span class="check">✓</span><b>Ninho</b><span class="muted">R$ 55,00/kg</span></div>
+<div class="choice" data-name="Doce de Leite" data-price="55"><span class="check">✓</span><b>Doce de Leite</b><span class="muted">R$ 55,00/kg</span></div>
+<div class="choice" data-name="Beijinho" data-price="55"><span class="check">✓</span><b>Beijinho</b><span class="muted">R$ 55,00/kg</span></div>
+<div class="choice" data-name="Ovomaltine" data-price="55"><span class="check">✓</span><b>Ovomaltine</b><span class="muted">R$ 55,00/kg</span></div>
+<div class="choice" data-name="Brigadeiro 50%" data-price="60"><span class="check">✓</span><b>Brigadeiro 50%</b><span class="muted">R$ 60,00/kg</span></div>
+<div class="choice" data-name="Prestígio" data-price="60"><span class="check">✓</span><b>Prestígio</b><span class="muted">R$ 60,00/kg</span></div>
+<div class="choice" data-name="Ninho com Nutella" data-price="60"><span class="check">✓</span><b>Ninho com Nutella</b><span class="muted">R$ 60,00/kg</span></div>
+<div class="choice" data-name="Ferrero Rocher" data-price="60"><span class="check">✓</span><b>Ferrero Rocher</b><span class="muted">R$ 60,00/kg</span></div>
+<div class="choice" data-name="Ninho com Morango" data-price="60"><span class="check">✓</span><b>Ninho com Morango</b><span class="muted">R$ 60,00/kg</span></div>
+<div class="choice" data-name="Maracujá com Brigadeiro" data-price="60"><span class="check">✓</span><b>Maracujá com Brigadeiro</b><span class="muted">R$ 60,00/kg</span></div>
+<div class="choice" data-name="Doce de Leite com Abacaxi" data-price="60"><span class="check">✓</span><b>Doce de Leite com Abacaxi</b><span class="muted">R$ 60,00/kg</span></div>
+<div class="choice" data-name="Doce de Leite com Morango" data-price="60"><span class="check">✓</span><b>Doce de Leite com Morango</b><span class="muted">R$ 60,00/kg</span></div>
+<div class="choice" data-name="Brigadeiro com Morango" data-price="60"><span class="check">✓</span><b>Brigadeiro com Morango</b><span class="muted">R$ 60,00/kg</span></div>
+<div class="choice" data-name="Doce de Leite com Coco" data-price="60"><span class="check">✓</span><b>Doce de Leite com Coco</b><span class="muted">R$ 60,00/kg</span></div>
+<div class="choice" data-name="Kit Kat" data-price="60"><span class="check">✓</span><b>Kit Kat</b><span class="muted">R$ 60,00/kg</span></div>
+<div class="choice" data-name="Dois Amores" data-price="60"><span class="check">✓</span><b>Dois Amores</b><span class="muted">R$ 60,00/kg</span></div>
+<div class="choice" data-name="Doce de Leite com Ameixa" data-price="60"><span class="check">✓</span><b>Doce de Leite com Ameixa</b><span class="muted">R$ 60,00/kg</span></div>
+<div class="choice" data-name="Kinder Bueno" data-price="70"><span class="check">✓</span><b>Kinder Bueno</b><span class="muted">R$ 70,00/kg</span></div>
+<div class="choice" data-name="Abacaxi com creme Belga" data-price="60"><span class="check">✓</span><b>Abacaxi com creme Belga</b><span class="muted">R$ 60,00/kg</span></div>
+<div class="choice" data-name="Abacaxi com creme coco" data-price="60"><span class="check">✓</span><b>Abacaxi com creme coco</b><span class="muted">R$ 60,00/kg</span></div>
+<div class="choice" data-name="Abacaxi com doce de leite" data-price="60"><span class="check">✓</span><b>Abacaxi com doce de leite</b><span class="muted">R$ 60,00/kg</span></div>
+<div class="choice" data-name="Abacaxi com Ninho Trufado" data-price="60"><span class="check">✓</span><b>Abacaxi com Ninho Trufado</b><span class="muted">R$ 60,00/kg</span></div>
+<div class="choice" data-name="Morango" data-price="65"><span class="check">✓</span><b>Morango</b><span class="muted">R$ 65,00/kg</span></div>
+</div>
+<div class="menu-title"><h3>4. Cobertura</h3></div><div class="choice-grid" id="covers">
+<div class="choice" data-name="Chantilly" data-extra="0"><span class="check">✓</span><b>Chantilly</b></div>
+<div class="choice" data-name="Ganache" data-extra="5"><span class="check">✓</span><b>Ganache</b><span class="muted">+ R$ 5,00</span></div>
+<div class="choice" data-name="Chantilly com raspas" data-extra="5"><span class="check">✓</span><b>Chantilly com raspas</b><span class="muted">+ R$ 5,00</span></div>
+<div class="choice" data-name="Ganache com raspas" data-extra="5"><span class="check">✓</span><b>Ganache com raspas</b><span class="muted">+ R$ 5,00</span></div>
+</div>
+<div class="choice" id="fruit" style="margin-top:12px"><span class="check">✓</span><b>Frutas na decoração</b><span class="muted">valor a combinar</span></div>
+<div class="row"><div class="field"><label>Data desejada</label><input id="date" type="date"></div><div class="field"><label>Formato</label><select id="shape"><option>Redondo</option><option>Quadrado</option><option>Outro</option></select></div></div>
+<div class="menu-title"><h3>5. Outros itens do cardápio</h3></div><p class="muted">Você também pode adicionar outros produtos à mesma encomenda. Marque o item e informe a quantidade.</p>
+<div class="menu-title"><h3 style="font-size:21px">Bolos tradicionais</h3></div><div class="order-items" id="otherCakes">
+<div class="order-item" data-product="Brigadeiro" data-price="55"><span><b>Brigadeiro</b><small>R$ 55.00/kg</small></span><input type="number" min="0" step="1" value="0" aria-label="Quantidade de Brigadeiro"></div>
+<div class="order-item" data-product="Ninho" data-price="55"><span><b>Ninho</b><small>R$ 55.00/kg</small></span><input type="number" min="0" step="1" value="0" aria-label="Quantidade de Ninho"></div>
+<div class="order-item" data-product="Doce de Leite" data-price="55"><span><b>Doce de Leite</b><small>R$ 55.00/kg</small></span><input type="number" min="0" step="1" value="0" aria-label="Quantidade de Doce de Leite"></div>
+<div class="order-item" data-product="Beijinho" data-price="55"><span><b>Beijinho</b><small>R$ 55.00/kg</small></span><input type="number" min="0" step="1" value="0" aria-label="Quantidade de Beijinho"></div>
+<div class="order-item" data-product="Ovomaltine" data-price="55"><span><b>Ovomaltine</b><small>R$ 55.00/kg</small></span><input type="number" min="0" step="1" value="0" aria-label="Quantidade de Ovomaltine"></div>
+<div class="order-item" data-product="Brigadeiro 50%" data-price="60"><span><b>Brigadeiro 50%</b><small>R$ 60.00/kg</small></span><input type="number" min="0" step="1" value="0" aria-label="Quantidade de Brigadeiro 50%"></div>
+<div class="order-item" data-product="Prestígio" data-price="60"><span><b>Prestígio</b><small>R$ 60.00/kg</small></span><input type="number" min="0" step="1" value="0" aria-label="Quantidade de Prestígio"></div>
+<div class="order-item" data-product="Ninho com Nutella" data-price="60"><span><b>Ninho com Nutella</b><small>R$ 60.00/kg</small></span><input type="number" min="0" step="1" value="0" aria-label="Quantidade de Ninho com Nutella"></div>
+<div class="order-item" data-product="Ferrero Rocher" data-price="60"><span><b>Ferrero Rocher</b><small>R$ 60.00/kg</small></span><input type="number" min="0" step="1" value="0" aria-label="Quantidade de Ferrero Rocher"></div>
+<div class="order-item" data-product="Ninho com Morango" data-price="60"><span><b>Ninho com Morango</b><small>R$ 60.00/kg</small></span><input type="number" min="0" step="1" value="0" aria-label="Quantidade de Ninho com Morango"></div>
+<div class="order-item" data-product="Maracujá com Brigadeiro" data-price="60"><span><b>Maracujá com Brigadeiro</b><small>R$ 60.00/kg</small></span><input type="number" min="0" step="1" value="0" aria-label="Quantidade de Maracujá com Brigadeiro"></div>
+<div class="order-item" data-product="Doce de Leite com Abacaxi" data-price="60"><span><b>Doce de Leite com Abacaxi</b><small>R$ 60.00/kg</small></span><input type="number" min="0" step="1" value="0" aria-label="Quantidade de Doce de Leite com Abacaxi"></div>
+<div class="order-item" data-product="Doce de Leite com Morango" data-price="60"><span><b>Doce de Leite com Morango</b><small>R$ 60.00/kg</small></span><input type="number" min="0" step="1" value="0" aria-label="Quantidade de Doce de Leite com Morango"></div>
+<div class="order-item" data-product="Brigadeiro com Morango" data-price="60"><span><b>Brigadeiro com Morango</b><small>R$ 60.00/kg</small></span><input type="number" min="0" step="1" value="0" aria-label="Quantidade de Brigadeiro com Morango"></div>
+<div class="order-item" data-product="Doce de Leite com Coco" data-price="60"><span><b>Doce de Leite com Coco</b><small>R$ 60.00/kg</small></span><input type="number" min="0" step="1" value="0" aria-label="Quantidade de Doce de Leite com Coco"></div>
+<div class="order-item" data-product="Kit Kat" data-price="60"><span><b>Kit Kat</b><small>R$ 60.00/kg</small></span><input type="number" min="0" step="1" value="0" aria-label="Quantidade de Kit Kat"></div>
+<div class="order-item" data-product="Dois Amores" data-price="60"><span><b>Dois Amores</b><small>R$ 60.00/kg</small></span><input type="number" min="0" step="1" value="0" aria-label="Quantidade de Dois Amores"></div>
+<div class="order-item" data-product="Doce de Leite com Ameixa" data-price="60"><span><b>Doce de Leite com Ameixa</b><small>R$ 60.00/kg</small></span><input type="number" min="0" step="1" value="0" aria-label="Quantidade de Doce de Leite com Ameixa"></div>
+<div class="order-item" data-product="Kinder Bueno" data-price="70"><span><b>Kinder Bueno</b><small>R$ 70.00/kg</small></span><input type="number" min="0" step="1" value="0" aria-label="Quantidade de Kinder Bueno"></div>
+</div><div class="menu-title"><h3 style="font-size:21px">Festival de sabores</h3></div><div class="order-items" id="festivalItems">
+<div class="order-item" data-product="Festival - Ferrero Rocher" data-price="70"><span><b>Ferrero Rocher</b><small>R$ 70.00/kg</small></span><input type="number" min="0" step="1" value="0" aria-label="Quantidade de Festival Ferrero Rocher"></div>
+<div class="order-item" data-product="Festival - Ninho com Morango" data-price="65"><span><b>Ninho com Morango</b><small>R$ 65.00/kg</small></span><input type="number" min="0" step="1" value="0" aria-label="Quantidade de Festival Ninho com Morango"></div>
+<div class="order-item" data-product="Festival - Prestígio" data-price="70"><span><b>Prestígio</b><small>R$ 70.00/kg</small></span><input type="number" min="0" step="1" value="0" aria-label="Quantidade de Festival Prestígio"></div>
+<div class="order-item" data-product="Festival - Maracujá com Brigadeiro" data-price="70"><span><b>Maracujá com Brigadeiro</b><small>R$ 70.00/kg</small></span><input type="number" min="0" step="1" value="0" aria-label="Quantidade de Festival Maracujá com Brigadeiro"></div>
+<div class="order-item" data-product="Festival - Ninho com Nutella" data-price="70"><span><b>Ninho com Nutella</b><small>R$ 70.00/kg</small></span><input type="number" min="0" step="1" value="0" aria-label="Quantidade de Festival Ninho com Nutella"></div>
+<div class="order-item" data-product="Festival - Ovomaltine" data-price="65"><span><b>Ovomaltine</b><small>R$ 65.00/kg</small></span><input type="number" min="0" step="1" value="0" aria-label="Quantidade de Festival Ovomaltine"></div>
+<div class="order-item" data-product="Festival - Dois Amores" data-price="65"><span><b>Dois Amores</b><small>R$ 65.00/kg</small></span><input type="number" min="0" step="1" value="0" aria-label="Quantidade de Festival Dois Amores"></div>
+<div class="order-item" data-product="Festival - Kinder Bueno" data-price="70"><span><b>Kinder Bueno</b><small>R$ 70.00/kg</small></span><input type="number" min="0" step="1" value="0" aria-label="Quantidade de Festival Kinder Bueno"></div>
+<div class="order-item" data-product="Festival - Red Velvet" data-price="70"><span><b>Red Velvet</b><small>R$ 70.00/kg</small></span><input type="number" min="0" step="1" value="0" aria-label="Quantidade de Festival Red Velvet"></div>
+<div class="order-item" data-product="Festival - Kit Kat" data-price="70"><span><b>Kit Kat</b><small>R$ 70.00/kg</small></span><input type="number" min="0" step="1" value="0" aria-label="Quantidade de Festival Kit Kat"></div>
+<div class="order-item" data-product="Festival - Olho de Sogra" data-price="70"><span><b>Olho de Sogra</b><small>R$ 70.00/kg</small></span><input type="number" min="0" step="1" value="0" aria-label="Quantidade de Festival Olho de Sogra"></div>
+</div><div class="menu-title"><h3 style="font-size:21px">Doces personalizados</h3></div><div class="order-items" id="sweetItems">
+<div class="order-item" data-product="Brigadeiro Tradicional" data-25="32.5" data-50="60" data-100="110"><span><b>Brigadeiro Tradicional</b><small>25: R$ 32.50 • 50: R$ 60.00 • 100: R$ 110.00</small></span><select aria-label="Quantidade de Brigadeiro Tradicional"><option value="0">0</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select></div>
+<div class="order-item" data-product="Brigadeiro de Nesquik" data-25="32.5" data-50="60" data-100="110"><span><b>Brigadeiro de Nesquik</b><small>25: R$ 32.50 • 50: R$ 60.00 • 100: R$ 110.00</small></span><select aria-label="Quantidade de Brigadeiro de Nesquik"><option value="0">0</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select></div>
+<div class="order-item" data-product="Brigadeiro de Beijinho" data-25="32.5" data-50="60" data-100="110"><span><b>Brigadeiro de Beijinho</b><small>25: R$ 32.50 • 50: R$ 60.00 • 100: R$ 110.00</small></span><select aria-label="Quantidade de Brigadeiro de Beijinho"><option value="0">0</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select></div>
+<div class="order-item" data-product="Brigadeiro de Ninho" data-25="32.5" data-50="60" data-100="110"><span><b>Brigadeiro de Ninho</b><small>25: R$ 32.50 • 50: R$ 60.00 • 100: R$ 110.00</small></span><select aria-label="Quantidade de Brigadeiro de Ninho"><option value="0">0</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select></div>
+<div class="order-item" data-product="Brigadeiro de Ferrero Rocher" data-25="38.75" data-50="72.5" data-100="135"><span><b>Brigadeiro de Ferrero Rocher</b><small>25: R$ 38.75 • 50: R$ 72.50 • 100: R$ 135.00</small></span><select aria-label="Quantidade de Brigadeiro de Ferrero Rocher"><option value="0">0</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select></div>
+<div class="order-item" data-product="Brigadeiro Dois Amores" data-25="37.5" data-50="70" data-100="130"><span><b>Brigadeiro Dois Amores</b><small>25: R$ 37.50 • 50: R$ 70.00 • 100: R$ 130.00</small></span><select aria-label="Quantidade de Brigadeiro Dois Amores"><option value="0">0</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select></div>
+<div class="order-item" data-product="Brigadeiro de Ninho c/ Nutella" data-25="37.5" data-50="70" data-100="130"><span><b>Brigadeiro de Ninho c/ Nutella</b><small>25: R$ 37.50 • 50: R$ 70.00 • 100: R$ 130.00</small></span><select aria-label="Quantidade de Brigadeiro de Ninho c/ Nutella"><option value="0">0</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select></div>
+<div class="order-item" data-product="Brigadeiro 50%" data-25="35" data-50="65" data-100="120"><span><b>Brigadeiro 50%</b><small>25: R$ 35.00 • 50: R$ 65.00 • 100: R$ 120.00</small></span><select aria-label="Quantidade de Brigadeiro 50%"><option value="0">0</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select></div>
+<div class="order-item" data-product="Prestígio" data-25="36.25" data-50="67.5" data-100="125"><span><b>Prestígio</b><small>25: R$ 36.25 • 50: R$ 67.50 • 100: R$ 125.00</small></span><select aria-label="Quantidade de Prestígio"><option value="0">0</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select></div>
+</div><div class="menu-title"><h3 style="font-size:21px">Trufas</h3></div><div class="order-items" id="truffleItems">
+<div class="order-item" data-product="Trufa Ninho" data-25="37.5" data-50="70" data-100="130"><span><b>Ninho</b><small>25: R$ 37.50 • 50: R$ 70.00 • 100: R$ 130.00</small></span><select aria-label="Quantidade de trufas Ninho"><option value="0">0</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select></div>
+<div class="order-item" data-product="Trufa Coco" data-25="37.5" data-50="70" data-100="130"><span><b>Coco</b><small>25: R$ 37.50 • 50: R$ 70.00 • 100: R$ 130.00</small></span><select aria-label="Quantidade de trufas Coco"><option value="0">0</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select></div>
+<div class="order-item" data-product="Trufa Morango" data-25="37.5" data-50="70" data-100="130"><span><b>Morango</b><small>25: R$ 37.50 • 50: R$ 70.00 • 100: R$ 130.00</small></span><select aria-label="Quantidade de trufas Morango"><option value="0">0</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select></div>
+<div class="order-item" data-product="Trufa Maracujá" data-25="37.5" data-50="70" data-100="130"><span><b>Maracujá</b><small>25: R$ 37.50 • 50: R$ 70.00 • 100: R$ 130.00</small></span><select aria-label="Quantidade de trufas Maracujá"><option value="0">0</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select></div>
+<div class="order-item" data-product="Trufa Ninho com Nutella" data-25="42.5" data-50="80" data-100="150"><span><b>Ninho com Nutella</b><small>25: R$ 42.50 • 50: R$ 80.00 • 100: R$ 150.00</small></span><select aria-label="Quantidade de trufas Ninho com Nutella"><option value="0">0</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select></div>
+<div class="order-item" data-product="Trufa Brigadeiro" data-25="37.5" data-50="70" data-100="130"><span><b>Brigadeiro</b><small>25: R$ 37.50 • 50: R$ 70.00 • 100: R$ 130.00</small></span><select aria-label="Quantidade de trufas Brigadeiro"><option value="0">0</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select></div>
+<div class="order-item" data-product="Trufa Meio Amargo" data-25="40" data-50="75" data-100="140"><span><b>Meio Amargo</b><small>25: R$ 40.00 • 50: R$ 75.00 • 100: R$ 140.00</small></span><select aria-label="Quantidade de trufas Meio Amargo"><option value="0">0</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select></div>
+</div>
+<div class="field"><label>Seu nome</label><input id="name" placeholder="Digite seu nome"></div>
+<div class="field"><label>Foto de referência do bolo</label><input id="cakePhoto" type="file" accept="image/*"></div>
+<div class="field"><label>Observações sobre o topper</label><textarea id="topper" placeholder="Escreva o que deseja no topper, nome, idade, frase, cores, etc."></textarea></div>
+<div class="field"><label>Outras observações</label><textarea id="obs" placeholder="Tema, cores, decoração ou algum detalhe especial..."></textarea></div>
+<div class="summary"><strong>Resumo da encomenda</strong><div class="summary-line"><span>Tamanho</span><span id="sumWeight">—</span></div><div class="summary-line"><span>Massa</span><span id="sumMass">—</span></div><div class="summary-line"><span>Outros itens</span><span id="sumOther">—</span></div><div class="summary-line"><span>Recheios</span><span id="sumFill">—</span></div><div class="summary-line"><span>Cobertura</span><span id="sumCover">—</span></div><div class="summary-line"><span>Adicionais</span><span id="sumExtras">—</span></div><div class="total"><span>Estimativa</span><span id="total">R$ 0,00</span></div><div class="note"><b>Importante:</b> o valor exibido é somente uma estimativa. Após recebermos seu pedido, enviaremos uma devolutiva com o valor final, considerando recheio, decoração, topper e demais detalhes.</div><button class="btn" onclick="sendWhatsApp()">Enviar pedido pelo WhatsApp →</button></div>
+</div></section>
+
+<section class="section" id="encomenda"><div class="card" style="text-align:center;padding:30px"><h2>Faça sua encomenda ♡</h2><p class="sub">Escolha seus sabores, envie sua referência e conte pra gente como você imaginou seu bolo. Vamos analisar todos os detalhes e retornar com o valor final.</p><a class="smallbtn" href="#bolo">Montar minha encomenda</a></div></section>
+
+<footer class="footer">Confeitaria Duas Irmãs • Feito com carinho ♡<br><span>Os valores podem ser atualizados pela confeitaria sempre que necessário.</span></footer>
+</main>
+<script>
+// ===================== EDITAR AQUI =====================
+// Troque pelo WhatsApp da confeitaria, somente números com código do país.
+const WHATSAPP = '5500000000000';
+// ======================================================
+let weight=null, mass=null, fillings=[], cover=null, fruit=false;
+const money=v=>v.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+const weightCards=document.querySelectorAll('#weights .choice');
+weightCards.forEach(c=>c.addEventListener('click',()=>{weightCards.forEach(x=>x.classList.remove('selected'));c.classList.add('selected');if(c.dataset.type==='bento'){weight={type:'Bento Cake',kg:null};document.getElementById('kg').value=''}else{updateKg()};update()}));
+function updateKg(){const kg=parseFloat(document.getElementById('kg').value.replace(',','.'));weight=kg>=0.5?{type:'Bolo por peso',kg}:null}
+document.getElementById('kg').addEventListener('input',()=>{updateKg();weightCards.forEach(x=>x.classList.toggle('selected',x.dataset.type==='kg'&&!!weight));update()});
+const massaCards=document.querySelectorAll('#massas .choice'); massaCards.forEach(c=>c.addEventListener('click',()=>{massaCards.forEach(x=>x.classList.remove('selected'));c.classList.add('selected');mass=c.dataset.name;update()}));
+const otherItems=document.querySelectorAll('.order-item'); otherItems.forEach(c=>{const inp=c.querySelector('input,select');inp.addEventListener('change',update)});
+function otherSummary(){const arr=[];otherItems.forEach(c=>{const v=+c.querySelector('input,select').value||0;if(v>0){let q=v;if(c.dataset['25'])arr.push(`${c.dataset.product}: ${q} unidades`);else arr.push(`${c.dataset.product}: ${q} unidade(s)`);}});return arr.join(', ')||'—'}
+const fillCards=document.querySelectorAll('#fillings .choice');
+fillCards.forEach(c=>c.addEventListener('click',()=>{const max=(weight&&weight.type==='Bolo por peso'&&weight.kg>2)?2:3;if(!c.classList.contains('selected')&&fillings.length>=max){alert(`Para este tamanho, escolha no máximo ${max} recheios.`);return}c.classList.toggle('selected');const n=c.dataset.name;if(c.classList.contains('selected'))fillings.push(n);else fillings=fillings.filter(x=>x!==n);update()}));
+const coverCards=document.querySelectorAll('#covers .choice');
+coverCards.forEach(c=>c.addEventListener('click',()=>{coverCards.forEach(x=>x.classList.remove('selected'));c.classList.add('selected');cover=c.dataset.name;update()}));
+document.getElementById('fruit').addEventListener('click',e=>{if(e.target.closest('input'))return;fruit=!fruit;document.getElementById('fruit').classList.toggle('selected',fruit);update()});
+function estimate(){if(!weight)return 0;if(weight.type==='Bento Cake')return 20.01;const prices=[...fillCards].filter(c=>c.classList.contains('selected')).map(c=>+c.dataset.price);const base=(prices.length?Math.max(...prices):55)*weight.kg;const extra=cover?(+document.querySelector('#covers .selected')?.dataset.extra||0):0;return base+extra}
+function update(){document.getElementById('sumMass')&&(document.getElementById('sumMass').textContent=mass||'—');document.getElementById('sumOther')&&(document.getElementById('sumOther').textContent=otherSummary());document.getElementById('sumWeight').textContent=weight?(weight.type==='Bento Cake'?'Bento Cake':' '+weight.kg.toLocaleString('pt-BR')+' kg'):'—';document.getElementById('sumFill').textContent=fillings.length?fillings.join(', '):'—';document.getElementById('sumCover').textContent=cover||'—';const extras=[];if(cover&&+document.querySelector('#covers .selected')?.dataset.extra)extras.push(`${cover}: + R$ 5,00`);if(fruit)extras.push('Frutas na decoração: valor a combinar');extras.push('Topper: R$ 15,00 a R$ 30,00 conforme modelo');document.getElementById('sumExtras').textContent=extras.join(' • ')||'—';document.getElementById('total').textContent=money(estimate())}
+function sendWhatsApp(){if(!weight){alert('Escolha o tamanho do bolo.');return}if(!fillings.length){alert('Escolha pelo menos um recheio.');return}if(!cover){alert('Escolha a cobertura.');return}const name=document.getElementById('name').value.trim()||'Não informado';const date=document.getElementById('date').value||'Não informada';const shape=document.getElementById('shape').value;const topper=document.getElementById('topper').value.trim()||'Não informado';const obs=document.getElementById('obs').value.trim()||'Nenhuma';const photo=document.getElementById('cakePhoto').files[0];const size=weight.type==='Bento Cake'?'Bento Cake (valor conforme peso e recheio)':weight.kg.toLocaleString('pt-BR')+' kg';const msg=`Olá! Gostaria de fazer uma encomenda na Confeitaria Duas Irmãs.%0A%0A*Nome:* ${name}%0A*Data:* ${date}%0A*Tamanho:* ${size}%0A*Massa:* ${mass||'Não informada'}%0A*Outros itens:* ${otherSummary()}%0A*Formato:* ${shape}%0A*Recheios:* ${fillings.join(', ')}%0A*Cobertura:* ${cover}%0A*Frutas:* ${fruit?'Sim — valor a combinar':'Não'}%0A*Topper:* ${topper}%0A*Observações:* ${obs}%0A*Foto de referência:* ${photo?'Tenho uma foto para enviar no WhatsApp':'Não'}%0A%0A*Estimativa:* ${money(estimate())}%0A%0A*Importante:* aguardo a devolutiva com o valor final da encomenda.`;window.open('https://wa.me/'+WHATSAPP+'?text='+msg,'_blank')}
+update();
+</script>
+</body></html>
